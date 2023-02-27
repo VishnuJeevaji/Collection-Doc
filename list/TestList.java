@@ -18,7 +18,8 @@ public class TestList {
 		
 		//TestList.printArrayList(list1);
 		//TestList.iterateArrayList(list1);
-		TestList.insertArrayList(list1);
+		//TestList.insertArrayList(list1);
+		TestList.specifiedIndexArrayList(list1);
 		
 	}
 //	public static void printArrayList(List list) {
@@ -28,7 +29,10 @@ public class TestList {
 //		for(int i=0; i<list.size(); i++) {
 //			System.out.println(list.get(i));	
 //		}
-	public static void insertArrayList(List list) {
-		System.out.println(list);
+//	public static void insertArrayList(List list) {
+//		System.out.println(list);
+//	}
+	public static void specifiedIndexArrayList(List list) {
+		System.out.println(list.get(3));
 	}
 }

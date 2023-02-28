@@ -23,16 +23,16 @@ public class TestList {
 		list1.add("Violet");
 		list1.add("Grey");
 
-		list2.add("java");
-		list2.add('a');
-		list2.add(3);
-		list2.add("White");
-		list2.add("Black");
-		list2.add(4, "Pink");
-		list2.set(3, "Yellow");
-		list2.remove(3);
-		list2.add("Violet");
-		list2.add("Grey");
+//		list2.add("java");
+//		list2.add('a');
+//		list2.add(3);
+//		list2.add("White");
+//		list2.add("Black");
+//		list2.add(4, "Pink");
+//		list2.set(3, "Yellow");
+//		list2.remove(3);
+//		list2.add("Violet");
+//		list2.add("Grey");
 
 		int fromIndex = 2;
 		int toIndex = 6;
@@ -47,7 +47,8 @@ public class TestList {
 		// TestList.copyArrayListToAnother(list1);
 		// TestList.extractArrayList(list1, fromIndex, toIndex);
 		// TestList.compareTwoArrayList(list1, list2);
-		TestList.joinTwoArrayList(list1, list2);
+		// TestList.joinTwoArrayList(list1, list2);
+		TestList.emptyAnArrayList(list1);
 
 	}
 
@@ -99,10 +100,14 @@ public class TestList {
 //		}
 //		System.out.println("Second List--> " + list2);
 //	}
-	public static void joinTwoArrayList(List list, List list2) {
-		System.out.println("Original List--> " + list);
-		int n = list.size();
-		list.addAll(list2);
-		System.out.println("Attached List--> " + list);
+//11.	public static void joinTwoArrayList(List list, List list2) {
+//		System.out.println("Original List--> " + list);
+//		int n = list.size();
+//		list.addAll(list2);
+//		System.out.println("Attached List--> " + list);
+//	}
+	public static void emptyAnArrayList(List list) {
+		list.removeAll(list);
+		System.out.println(list);
 	}
 }

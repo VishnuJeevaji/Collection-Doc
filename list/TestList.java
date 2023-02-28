@@ -26,7 +26,8 @@ public class TestList {
 		//TestList.specifiedIndexArrayList(list1);
 		//TestList.replaceIndexArrayList(list1);
 		//TestList.removeThirdElementArrayList(list1);
-		TestList.searchElement(list1, o);
+		//TestList.searchElement(list1, o);
+		TestList.copyArrayListToAnother(list1);
 		
 	}
 //1.	public static void printArrayList(List list) {
@@ -48,12 +49,18 @@ public class TestList {
 //6.	public static void removeThirdElementArrayList(List list) {
 //		System.out.println(list);
 //	}
-	public static void searchElement(List list, Object o) {
-		System.out.println(list);
-		if(list.contains(o)) {
-			System.out.println(o + " is present in list");
-		}else {
-			System.out.println(o + " is NOT present in list");
-		}
+//7.	public static void searchElement(List list, Object o) {
+//		System.out.println(list);
+//		if(list.contains(o)) {
+//			System.out.println(o + " is present in list");
+//		}else {
+//			System.out.println(o + " is NOT present in list");
+//		}
+//	}
+	public static void copyArrayListToAnother(List list) {
+		System.out.println("Original List--> " + list);
+		ArrayList list2 = new ArrayList(list.size());
+		list2.addAll(list);
+		System.out.println("Copied List--> " + list2);
 	}
 }

@@ -16,12 +16,14 @@ public class TestList {
 		list1.add("Black");
 		list1.add(4, "Pink");
 		list1.set(3,"Yellow");
+		list1.remove(3);
 		
 		//TestList.printArrayList(list1);
 		//TestList.iterateArrayList(list1);
 		//TestList.insertArrayList(list1);
 		//TestList.specifiedIndexArrayList(list1);
-		TestList.replaceIndexArrayList(list1);
+		//TestList.replaceIndexArrayList(list1);
+		TestList.removeThirdElementArrayList(list1);
 		
 	}
 //	public static void printArrayList(List list) {
@@ -37,7 +39,10 @@ public class TestList {
 //	public static void specifiedIndexArrayList(List list) {
 //		System.out.println(list.get(3));
 //	}
-	public static void replaceIndexArrayList(List list) {
+//	public static void replaceIndexArrayList(List list) {
+//		System.out.println(list);
+//	}
+	public static void removeThirdElementArrayList(List list) {
 		System.out.println(list);
 	}
 }

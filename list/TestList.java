@@ -8,6 +8,8 @@ public class TestList {
 	public static void main(String[] args) {
 	
 		ArrayList list1 = new ArrayList();
+		Object o = new Object();
+		o = "Green";
 		
 		list1.add("Red");
 		list1.add("Green");
@@ -23,26 +25,35 @@ public class TestList {
 		//TestList.insertArrayList(list1);
 		//TestList.specifiedIndexArrayList(list1);
 		//TestList.replaceIndexArrayList(list1);
-		TestList.removeThirdElementArrayList(list1);
+		//TestList.removeThirdElementArrayList(list1);
+		TestList.searchElement(list1, o);
 		
 	}
-//	public static void printArrayList(List list) {
+//1.	public static void printArrayList(List list) {
 //		System.out.println(list);
 //	}
-//	public static void iterateArrayList(List list) {
+//2.	public static void iterateArrayList(List list) {
 //		for(int i=0; i<list.size(); i++) {
 //			System.out.println(list.get(i));	
 //		}
-//	public static void insertArrayList(List list) {
+//3.	public static void insertArrayList(List list) {
 //		System.out.println(list);
 //	}
-//	public static void specifiedIndexArrayList(List list) {
+//4.	public static void specifiedIndexArrayList(List list) {
 //		System.out.println(list.get(3));
 //	}
-//	public static void replaceIndexArrayList(List list) {
+//5.	public static void replaceIndexArrayList(List list) {
 //		System.out.println(list);
 //	}
-	public static void removeThirdElementArrayList(List list) {
+//6.	public static void removeThirdElementArrayList(List list) {
+//		System.out.println(list);
+//	}
+	public static void searchElement(List list, Object o) {
 		System.out.println(list);
+		if(list.contains(o)) {
+			System.out.println(o + " is present in list");
+		}else {
+			System.out.println(o + " is NOT present in list");
+		}
 	}
 }

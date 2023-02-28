@@ -8,6 +8,7 @@ public class TestList {
 	public static void main(String[] args) {
 
 		ArrayList list1 = new ArrayList();
+		ArrayList list2 = new ArrayList();
 		Object o = new Object();
 		o = "Green";
 
@@ -22,6 +23,19 @@ public class TestList {
 		list1.add("Violet");
 		list1.add("Grey");
 		
+		
+		list2.add("Red");
+		list2.add("Green");
+		list2.add("Orange");
+		list2.add("White");
+		list2.add("Black");
+		list2.add(4, "Pink");
+		list2.set(3, "Yellow");
+		list2.remove(3);
+		list2.add("Violet");
+		list2.add("Grey");
+		
+		
 		int fromIndex = 2;
 		int toIndex = 6;
 
@@ -33,7 +47,8 @@ public class TestList {
 		// TestList.removeThirdElementArrayList(list1);
 		// TestList.searchElement(list1, o);
 		//TestList.copyArrayListToAnother(list1);
-		TestList.extractArrayList(list1, fromIndex, toIndex);
+		//TestList.extractArrayList(list1, fromIndex, toIndex);
+		TestList.compareTwoArrayList(list1, list2);
 
 	}
 
@@ -70,8 +85,19 @@ public class TestList {
 //		list2.addAll(list);
 //		System.out.println("Copied List--> " + list2);
 //	}
-	public static void extractArrayList(List list,int fromIndex,int toIndex) {
+//9.	public static void extractArrayList(List list,int fromIndex,int toIndex) {
+//		System.out.println("Original List--> " + list);
+//		System.out.println("Extracted List--> " + list.subList(fromIndex, toIndex));
+//	}
+	public static void compareTwoArrayList(List list,List list2) {
 		System.out.println("Original List--> " + list);
-		System.out.println("Extracted List--> " + list.subList(fromIndex, toIndex));
+		for(int i=0; i<list.size(); i++) {
+			if(list.get(i).equals(list2.get(i))){
+				System.out.println("Index "+ i + " Yes");
+			}else {
+				System.out.println("No");
+			}
+		}
+		System.out.println("Second List--> " + list2);
 	}
 }

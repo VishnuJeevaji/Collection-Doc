@@ -48,7 +48,8 @@ public class TestList {
 		// TestList.extractArrayList(list1, fromIndex, toIndex);
 		// TestList.compareTwoArrayList(list1, list2);
 		// TestList.joinTwoArrayList(list1, list2);
-		TestList.emptyAnArrayList(list1);
+		// TestList.emptyAnArrayList(list1);
+		TestList.chechIsEmpty(list1);
 
 	}
 
@@ -106,8 +107,12 @@ public class TestList {
 //		list.addAll(list2);
 //		System.out.println("Attached List--> " + list);
 //	}
-	public static void emptyAnArrayList(List list) {
-		list.removeAll(list);
+//13.	public static void emptyAnArrayList(List list) {
+//		list.removeAll(list);
+//		System.out.println(list);
+//	}
+	public static void chechIsEmpty(List list) {
+		System.out.println(list.isEmpty());
 		System.out.println(list);
 	}
 }

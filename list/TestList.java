@@ -22,11 +22,10 @@ public class TestList {
 		list1.remove(3);
 		list1.add("Violet");
 		list1.add("Grey");
-		
-		
-		list2.add("Red");
-		list2.add("Green");
-		list2.add("Orange");
+
+		list2.add("java");
+		list2.add('a');
+		list2.add(3);
 		list2.add("White");
 		list2.add("Black");
 		list2.add(4, "Pink");
@@ -34,8 +33,7 @@ public class TestList {
 		list2.remove(3);
 		list2.add("Violet");
 		list2.add("Grey");
-		
-		
+
 		int fromIndex = 2;
 		int toIndex = 6;
 
@@ -46,9 +44,10 @@ public class TestList {
 		// TestList.replaceIndexArrayList(list1);
 		// TestList.removeThirdElementArrayList(list1);
 		// TestList.searchElement(list1, o);
-		//TestList.copyArrayListToAnother(list1);
-		//TestList.extractArrayList(list1, fromIndex, toIndex);
-		TestList.compareTwoArrayList(list1, list2);
+		// TestList.copyArrayListToAnother(list1);
+		// TestList.extractArrayList(list1, fromIndex, toIndex);
+		// TestList.compareTwoArrayList(list1, list2);
+		TestList.joinTwoArrayList(list1, list2);
 
 	}
 
@@ -89,15 +88,21 @@ public class TestList {
 //		System.out.println("Original List--> " + list);
 //		System.out.println("Extracted List--> " + list.subList(fromIndex, toIndex));
 //	}
-	public static void compareTwoArrayList(List list,List list2) {
+//10.	public static void compareTwoArrayList(List list,List list2) {
+//		System.out.println("Original List--> " + list);
+//		for(int i=0; i<list.size(); i++) {
+//			if(list.get(i).equals(list2.get(i))){
+//				System.out.println("Index "+ i + " Yes");
+//			}else {
+//				System.out.println("No");
+//			}
+//		}
+//		System.out.println("Second List--> " + list2);
+//	}
+	public static void joinTwoArrayList(List list, List list2) {
 		System.out.println("Original List--> " + list);
-		for(int i=0; i<list.size(); i++) {
-			if(list.get(i).equals(list2.get(i))){
-				System.out.println("Index "+ i + " Yes");
-			}else {
-				System.out.println("No");
-			}
-		}
-		System.out.println("Second List--> " + list2);
+		int n = list.size();
+		list.addAll(list2);
+		System.out.println("Attached List--> " + list);
 	}
 }
